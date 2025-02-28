@@ -446,8 +446,9 @@
 
 // -- MQTT - Domoticz -----------------------------
 #define USE_DOMOTICZ                             // Enable Domoticz (+6k code, +0.3k mem)
-  #define DOMOTICZ_IN_TOPIC    "domoticz/in"     // Domoticz Input Topic
-  #define DOMOTICZ_OUT_TOPIC   "domoticz/out"    // Domoticz Output Topic
+  #define DOMOTICZ_IN_TOPIC    "v1/devices/me/telemetry"     // Domoticz Input Topic
+  #define DOMOTICZ_OUT_TOPIC   "v1/devices/me/rpc/request/+"    // Domoticz Output Topic v1/devices/me/rpc/request/{RequestID}
+  #define DOMOTICZ_ACK_TOPIC   "v1/devices/me/rpc/response/"    // Domoticz ACK Topic v1/devices/me/rpc/response/{RequestID}
 
 // -- MQTT - Home Assistant Discovery -------------
 //#define USE_HOME_ASSISTANT                                   // Enable Home Assistant Discovery Support (+12k code, +6 bytes mem)
